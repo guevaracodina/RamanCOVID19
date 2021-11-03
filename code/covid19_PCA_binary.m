@@ -38,7 +38,7 @@ rawData = X;
 X = normData;
 
 %% Support Vector Machine and Error Correcting Output Coding model
-nFolds = 10;
+nFolds = 10;                            % External CV loop number of folds
 rng(5, 'twister');                      % For repeatability
 CVP = cvpartition(Y, 'Kfold', nFolds);  % Cross-validation data partition
 tic
