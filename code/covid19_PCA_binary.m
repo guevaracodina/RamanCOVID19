@@ -44,7 +44,7 @@ CVP = cvpartition(Y, 'Kfold', nFolds);  % Cross-validation data partition
 tic
 trainLoss = zeros([nFolds 1]);          % Pre-allocation
 testLoss = zeros([nFolds 1]);           % Pre-allocation
-classLabels = unique(Y);                % COVID=0, Suspected=1 and Healthy=2
+classLabels = unique(Y);                % COVID=0 and Healthy=2
 testScores = NaN(numObservations, numel(classLabels)); % Pre-allocation
 nPCs = 10;                              % Number of principal components
 for iFolds=1:nFolds
